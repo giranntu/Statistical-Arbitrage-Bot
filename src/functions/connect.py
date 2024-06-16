@@ -115,11 +115,6 @@ def private_requests(endpoint, method="GET", **params):
     return response.json()
 
 
-# Example usage:
-# Make sure to replace `config.py` and `endpoints.py` with your actual configuration.
-# Ensure that `base_url` and `servertime_url` are correctly set for Crypto.com.
-
-# Example public request to get server time
 print(get_timestamp())
 
 # Example private request to get account balances
