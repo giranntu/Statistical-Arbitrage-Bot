@@ -115,7 +115,3 @@ def private_requests(endpoint, method="GET", **params):
     return response.json()
 
 
-print(get_timestamp())
-
-# Example private request to get account balances
-# print(private_requests('/v2/private/get-account-summary', method='POST'))
