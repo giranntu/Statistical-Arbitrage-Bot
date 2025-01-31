@@ -59,5 +59,5 @@ Trading cryptocurrencies involves significant risk and may result in the loss of
 ---
 
 ## Contact
-For any inquiries or support, reach out at your_email@example.com.
+For any inquiries or support, reach out at jaysubhashconar@gmail.com.
 
