@@ -1,8 +1,7 @@
 import os
 
-api_key = os.environ.get("bitget_key")
-api_secret = os.environ.get("bitget_private")
-passphrase = os.environ.get("bitget_passphrase")
+api_key = os.environ.get("cryptocom_key")
+api_secret = os.environ.get("cryptocom_private")
 email_password = os.environ.get("email_password")
 
 interval_dict = {"1m": 1, "3m": 3, "5m": 5, "15m": 15, "30m": 30,

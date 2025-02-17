@@ -30,9 +30,19 @@ The bot also supports periodic **email notifications** to keep you informed abou
 ## Installation
 ### Prerequisites
 - Python 3.8 or higher
-- Crypto.com API keys (create on the Crypto.com exchange platform)
-- Email account with App password for notifications (Gmail recommended)
-
+- Install all the necessary libraries listed in `requirements.txt`using the following command:
+   ```bash
+   pip install -r requirements.txt
+   ```
+- Create Crypto.com API keys (create on the Crypto.com Exchange platform) and Save them as environmental variables using the following commands:
+  ```bash
+   setx cryptocom_key "<API KEY HERE>"
+   setx cryptocom_private "<SECRET KEY HERE>"
+   ```
+- Email account with App password (or account password) for notifications (Don't forget to change the smtp server according to your email in `send_email.py`)
+  ```bash
+   setx email_password "<EMAIL PASSWORD HERE>"
+  ```
 ---
 
 ## Usage
