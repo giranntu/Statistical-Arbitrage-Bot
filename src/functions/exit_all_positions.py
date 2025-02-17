@@ -1,5 +1,5 @@
+from src.endpoints import cancel_all_url, close_position_url
 from .position_calls import query_orders, query_positions
-from src.endpoints import cancel_all, close_position_url
 from .data_handler import read_json, edit_json
 from .connect import private_requests
 
@@ -29,7 +29,7 @@ def exit_all_positions():
         "long_ticker", "short_ticker", "quote_currency")
 
     # Canceling all active orders
-    private_requests(cancel_all, method="POST", productType="USDT-FUTURES")
+    private_requests(cancel_all_url, method="POST", productType="USDT-FUTURES")
 
     # Getting position information
     _, size_1 = query_positions(long_ticker, quote)

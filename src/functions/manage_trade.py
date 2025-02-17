@@ -1,7 +1,7 @@
 from .trade_details import get_ticker_trade_liquidity
 from .check_status import check_order_status
+from src.endpoints import cancel_all_url
 from .connect import private_requests
-from src.endpoints import cancel_all
 from .data_handler import read_json
 from .order import execute_order
 from .z_score import z_score
@@ -146,7 +146,7 @@ def trade(kill_switch):
 
                 else:
                     # Cancel all active orders
-                    private_requests(cancel_all, method="POST", productType="USDT-FUTURES")
+                    private_requests(cancel_all_url, method="POST", productType="USDT-FUTURES")
                     print("Orders Canceled")
                     kill_switch = 1
 

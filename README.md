@@ -30,9 +30,19 @@ The bot also supports periodic **email notifications** to keep you informed abou
 ## Installation
 ### Prerequisites
 - Python 3.8 or higher
-- Crypto.com API keys (create on the Crypto.com exchange platform)
-- Email account with App password for notifications (Gmail recommended)
-
+- Install all the necessary libraries listed in `requirements.txt`using the following command:
+   ```bash
+   pip install -r requirements.txt
+   ```
+- Create Crypto.com API keys (create on the Crypto.com Exchange platform) and Save them as environmental variables using the following commands:
+  ```bash
+   setx cryptocom_key "<API KEY HERE>"
+   setx cryptocom_private "<SECRET KEY HERE>"
+   ```
+- Email account with App password (or account password) for notifications (Don't forget to change the smtp server according to your email in `send_email.py`)
+  ```bash
+   setx email_password "<EMAIL PASSWORD HERE>"
+  ```
 ---
 
 ## Usage
@@ -53,11 +63,10 @@ You can adjust the different parameters in the `config.py` file.
 ---
 
 ## Risk Disclaimer
-Trading cryptocurrencies involves significant risk and may result in the loss of capital. This bot is intended for educational and research purposes only. Use it at your own risk.
-
+Trading cryptocurrencies involves significant risk and may result in the loss of capital. This bot is intended for educational and research purposes only.
+I have never tested this bot with real money. I cannot guarantee that it will generate you profits. Use it at your own risk.
 
 ---
 
 ## Contact
 For any inquiries or support, reach out at jaysubhashconar@gmail.com.
-

@@ -1,8 +1,7 @@
-from config import api_key, api_secret
-from endpoints import base_url, servertime_url
+from src.endpoints import api_url, servertime_url
+from src.config import api_key, api_secret
 from functools import wraps
 import requests
-import base64
 import hmac
 import json
 import time
@@ -19,7 +18,7 @@ def get_timestamp():
 def pre_hash(api_key, method, timestamp, nonce, params):
     """Creates a pre-hash string for Crypto.com"""
     params_str = json.dumps(params, separators=(",", ":"), sort_keys=True)
-    return f"{method}{base_url}{timestamp}{nonce}{params_str}"
+    return f"{method}{api_url}{timestamp}{nonce}{params_str}"
 
 
 def signature(api_key, api_secret, message):
@@ -102,7 +101,7 @@ def public_requests(url, method="GET", headers=None, **kwargs):
 
 def private_requests(endpoint, method="GET", **params):
     """Receives endpoint and sends private requests to Crypto.com API"""
-    url = f"{base_url}{endpoint}"
+    url = f"{api_url}{endpoint}"
     auth_params = auth(endpoint, method, **params)
 
     headers = {"Content-Type": "application/json"}
